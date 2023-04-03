@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-8">
+                        <h2 style="font-family: 'Inter', sans-serif;font-weight: 400;">Social Media Dashboard</h2>
+                    </div>
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-9">
+                                <h6 style="font-family: 'Inter', sans-serif;font-weight: 400;color:#536579 ; font-size: 84%;display: flex;
+                                justify-content: flex-end;">Dark Mode</h6>
+                            </div>
+                            <div class="form-check form-switch col-3">
+                                <label class="form-check-label " for="flexSwitchCheckChecked"></label> 
+                                <input class="form-check-input " type="checkbox" id="flexSwitchCheckChecked" checked [(ngModel)]="statusBackground" (click)="backgroundChange()">
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12">
+                <div class="row">
+                    <h6 style="font-family: 'Inter', sans-serif;font-weight: 400;color:#536579 ; font-size: 84%;padding-bottom: 30px;">Total Followers:  {{data.followers}}</h6>
+                    <div class="col-sm-3"  *ngFor="let data of socialMedia">
+                        <app-card-social-media class="col-3" [dataSocial]="data"></app-card-social-media>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12">
+                <h2 style="font-family: 'Inter', sans-serif;font-weight: 400;padding-top: 35px;color:  #94a1ab;">Overview-Today</h2>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-sm-3" style="padding-top: 15px;" style="padding-top: 5px;" *ngFor="let dataT of dateToday">
+                        <app-card-statistics [dataToday]="dataT"></app-card-statistics>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import  social_media_data from 'src/assets/json/datos.json';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'social_media_sol';
+ 
 }
